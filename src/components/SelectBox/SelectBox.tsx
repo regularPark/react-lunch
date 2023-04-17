@@ -8,7 +8,7 @@ interface SelectBoxProps {
 
 function SelectBox({ onOptionChange, filter }: SelectBoxProps) {
   const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    if (onOptionChange) onOptionChange(event);
+    onOptionChange(event);
   };
 
   return (

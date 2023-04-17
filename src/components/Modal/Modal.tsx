@@ -6,7 +6,7 @@ interface ModalProps {
   isClicked: boolean;
 }
 
-const useModalRef = (props: ModalProps) => {
+const useShowModal = (props: ModalProps) => {
   const modalRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const useModalRef = (props: ModalProps) => {
 
 function Modal(props: ModalProps) {
   const [, setIsClicked] = useState(props.isClicked);
-  const [modalRef] = useModalRef(props);
+  const [modalRef] = useShowModal(props);
 
   const closeModal = () => {
     if (modalRef.current) {
